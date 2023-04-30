@@ -10828,10 +10828,14 @@ progress {
   margin-inline-end: 1.94rem;
 }
 
-textarea.form-control, textarea.asColorPicker-input, .select2-container--default textarea.select2-selection--single, .select2-container--default .select2-selection--single textarea.select2-search__field, textarea.typeahead,
-textarea.tt-query,
-textarea.tt-hint {
-  min-height: 2rem;
+/*textarea.form-control, textarea.asColorPicker-input, .select2-container--default textarea.select2-selection--single, .select2-container--default .select2-selection--single textarea.select2-search__field, textarea.typeahead,*/
+/*textarea.tt-query,*/
+/*textarea.tt-hint {*/
+/*  min-height: 2rem;*/
+/*}*/
+
+textarea.worker-needs {
+  min-height: 5rem;
 }
 
 textarea.form-control-sm {
