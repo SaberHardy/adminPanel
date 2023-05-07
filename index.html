@@ -39,7 +39,7 @@
         <div class="navbar-menu-wrapper d-flex align-items-top">
             <ul class="navbar-nav">
                 <li class="nav-item font-weight-semibold d-none d-lg-block ms-0">
-                    <h1 class="welcome-text">Good Morning, <span class="text-black fw-bold">Admin</span></h1>
+                    <h1 class="welcome-text">Good Morning, <span class="text-black fw-bold">UNIV</span></h1>
                 </li>
             </ul>
             <ul class="navbar-nav ms-auto">
@@ -130,6 +130,7 @@
                         </a>
                     </div>
                 </li>
+
                 <li class="nav-item dropdown d-none d-lg-block user-dropdown">
                     <a class="nav-link" id="UserDropdown" href="#" data-bs-toggle="dropdown" aria-expanded="false">
                         <img class="img-xs rounded-circle" src="images/faces/face8.jpg" alt="Profile image"> </a>
@@ -141,53 +142,22 @@
                         </div>
                         <a class="dropdown-item"><i
                                 class="dropdown-item-icon mdi mdi-account-outline text-primary me-2"></i> My Profile
-                            <span class="badge badge-pill badge-danger">1</span></a>
-                        <a class="dropdown-item"><i
-                                class="dropdown-item-icon mdi mdi-message-text-outline text-primary me-2"></i> Messages</a>
-                        <a class="dropdown-item"><i
-                                class="dropdown-item-icon mdi mdi-calendar-check-outline text-primary me-2"></i>
-                            Activity</a>
-                        <a class="dropdown-item"><i
-                                class="dropdown-item-icon mdi mdi-help-circle-outline text-primary me-2"></i> FAQ</a>
-                        <a class="dropdown-item"><i class="dropdown-item-icon mdi mdi-power text-primary me-2"></i>Sign
-                            Out</a>
+                            <span class="badge badge-pill badge-danger">1</span>
+                        </a>
+
                     </div>
                 </li>
             </ul>
-            <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button"
-                    data-bs-toggle="offcanvas">
-                <span class="mdi mdi-menu"></span>
-            </button>
+<!--            <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button"-->
+<!--                    data-bs-toggle="offcanvas"> -->
+<!--                <span class="mdi mdi-menu"></span> -->
+<!--                -->
+<!--            </button> -->
         </div>
     </nav>
     <!-- partial -->
     <div class="container-fluid page-body-wrapper">
-        <!-- partial:partials/_settings-panel.html -->
-        <div class="theme-setting-wrapper">
-            <div id="theme-settings" class="settings-panel">
-                <i class="settings-close ti-close"></i>
-                <p class="settings-heading">SIDEBAR SKINS</p>
-                <div class="sidebar-bg-options selected" id="sidebar-light-theme">
-                    <div class="img-ss rounded-circle bg-light border me-3"></div>
-                    Light
-                </div>
-                <div class="sidebar-bg-options" id="sidebar-dark-theme">
-                    <div class="img-ss rounded-circle bg-dark border me-3"></div>
-                    Dark
-                </div>
-                <p class="settings-heading mt-2">HEADER SKINS</p>
-                <div class="color-tiles mx-0 px-4">
-                    <div class="tiles success"></div>
-                    <div class="tiles warning"></div>
-                    <div class="tiles danger"></div>
-                    <div class="tiles info"></div>
-                    <div class="tiles dark"></div>
-                    <div class="tiles default"></div>
-                </div>
-            </div>
-        </div>
-        <!-- partial -->
-        <!-- partial:partials/_sidebar.html -->
+
         <nav class="sidebar sidebar-offcanvas" id="sidebar">
             <ul class="nav">
                 <li class="nav-item">
@@ -221,7 +191,7 @@
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link"
-                                   href="pages/ui-features/stock_workers.html">Maintenance worker</a>
+                                   href="pages/ui-features/maint_workers.html">Maintenance worker</a>
                             </li>
                         </ul>
                     </div>
@@ -237,11 +207,12 @@
                     </a>
                     <div class="collapse" id="auth">
                         <ul class="nav flex-column sub-menu">
-                            <li class="nav-item"><a class="nav-link" href="pages/samples/login.html"> Login </a></li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="pages/ui-features/login.html"> Login </a>
+                            </li>
                         </ul>
                     </div>
                 </li>
-
             </ul>
         </nav>
         <!-- partial -->
@@ -270,6 +241,7 @@
                                                                 </div>
                                                                 <div>
                                                                     <!-- ToDo: Just Admin can see and Do this -->
+                                                                    <!-- ToDo: Only make it with backend -->
                                                                     <button class="btn btn-primary btn-lg text-white mb-0 me-0"
                                                                             type="button">
                                                                         <i class="mdi mdi-account-plus"></i>
@@ -281,9 +253,6 @@
                                                                 <table class="table select-table">
                                                                     <thead>
                                                                     <tr>
-                                                                        <th>
-
-                                                                        </th>
                                                                         <th>Needs</th>
                                                                         <th>Poster</th>
                                                                         <th>Status</th>
@@ -291,16 +260,6 @@
                                                                     </thead>
                                                                     <tbody>
                                                                     <tr>
-                                                                        <td>
-                                                                            <div class="form-check form-check-flat mt-0">
-                                                                                <label class="form-check-label">
-                                                                                    <input type="checkbox"
-                                                                                           class="form-check-input"
-                                                                                           aria-checked="false">
-                                                                                    <i class="input-helper"></i>
-                                                                                </label>
-                                                                            </div>
-                                                                        </td>
                                                                         <td>
                                                                             <div class="d-flex ">
                                                                                 <div>
@@ -326,16 +285,6 @@
                                                                     </tr>
                                                                     <tr>
                                                                         <td>
-                                                                            <div class="form-check form-check-flat mt-0">
-                                                                                <label class="form-check-label">
-                                                                                    <input type="checkbox"
-                                                                                           class="form-check-input"
-                                                                                           aria-checked="false">
-                                                                                    <i class="input-helper"></i>
-                                                                                </label>
-                                                                            </div>
-                                                                        </td>
-                                                                        <td>
                                                                             <div class="d-flex">
                                                                                 <div>
                                                                                     <a href="order-detail.html"
@@ -359,16 +308,7 @@
                                                                         </td>
                                                                     </tr>
                                                                     <tr>
-                                                                        <td>
-                                                                            <div class="form-check form-check-flat mt-0">
-                                                                                <label class="form-check-label">
-                                                                                    <input type="checkbox"
-                                                                                           class="form-check-input"
-                                                                                           aria-checked="false">
-                                                                                    <i class="input-helper"></i>
-                                                                                </label>
-                                                                            </div>
-                                                                        </td>
+
                                                                         <td>
                                                                             <div class="d-flex">
                                                                                 <div>
