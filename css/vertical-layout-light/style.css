@@ -11740,7 +11740,7 @@ fieldset:disabled .swal2-modal .swal2-buttonswrapper .swal2-styled,
 }
 
 .btn-info {
-  color: #000;
+  color: #ef0b0b;
   background-color: #52CDFF;
   border-color: #52CDFF;
 }
@@ -21473,8 +21473,10 @@ code {
 
 /*social buttons*/
 .btn-primary {
-  background: #1F3BB3;
+  background: #3a88ff;
   color: #ffffff;
+  font-size: 25px;
+  font-weight: bold;
 }
 
 .btn-primary.btn-light, .btn-primary.btn-secondary {
@@ -21546,7 +21548,9 @@ code {
 
 .btn-success {
   background: #34B1AA;
-  color: #ffffff;
+  color: #070707;
+  font-size: 18px;
+  font-weight: bold;
 }
 
 .btn-success.btn-light, .btn-success.btn-secondary {
@@ -21582,7 +21586,9 @@ code {
 
 .btn-info {
   background: #52CDFF;
-  color: #ffffff;
+  color: #151414;
+  font-weight: bold;
+  font-size: 18px;
 }
 
 .btn-info.btn-light, .btn-info.btn-secondary {
