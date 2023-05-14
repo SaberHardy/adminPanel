@@ -8,17 +8,13 @@
     <title>Stock</title>
     <!-- plugins:css -->
     <link rel="stylesheet" href="../../css/bootstrap-icons/bootstrap-icons.css">
+    <link rel="stylesheet" href="../../css/bootstrap-icons/bootstrap.min.css">
     <link rel="stylesheet" href="../../vendors/feather/feather.css">
     <link rel="stylesheet" href="../../vendors/mdi/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="../../vendors/ti-icons/css/themify-icons.css">
     <link rel="stylesheet" href="../../vendors/typicons/typicons.css">
     <link rel="stylesheet" href="../../vendors/simple-line-icons/css/simple-line-icons.css">
     <link rel="stylesheet" href="../../vendors/css/vendor.bundle.base.css">
-
-    <link rel="stylesheet" href="../../css/bootstrap-icons/bootstrap.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
-            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-            crossorigin="anonymous"></script>
     <!-- endinject -->
     <!-- Plugin css for this page -->
     <!-- End plugin css for this page -->
@@ -27,7 +23,84 @@
     <!-- endinject -->
     <link rel="shortcut icon" href="../../images/favicon.png"/>
 </head>
+<style>
+    /** {*/
+    /*    box-sizing: border-box*/
+    /*}*/
 
+    /*body {*/
+    /*    font-family: "Lato", sans-serif;*/
+    /*}*/
+
+    /* Style the tab */
+    .tab {
+        float: left;
+        border: 1px solid #ccc;
+        background-color: #f1f1f1;
+        width: 30%;
+        height: 300px;
+    }
+
+    /* Style the buttons inside the tab */
+    .tab button {
+        display: block;
+        background-color: inherit;
+        color: black;
+        padding: 22px 16px;
+        width: 100%;
+        border: none;
+        outline: none;
+        text-align: left;
+        cursor: pointer;
+        transition: 0.3s;
+        font-size: 17px;
+    }
+
+    /* Change background color of buttons on hover */
+    .tab button:hover {
+        background-color: #ddd;
+    }
+
+    /* Create an active/current "tab button" class */
+    .tab button.active {
+        background-color: #ccc;
+    }
+
+    /* Style the tab content */
+    .tabcontent {
+        float: left;
+        padding: 0px 12px;
+        border: 0px solid #d70f0f;
+        width: 70%;
+        border-left: none;
+        height: 300px;
+    }
+
+    .btn-info {
+        position: absolute;
+        right: 15px;
+        bottom: -200px;
+    }
+
+    .btn-danger {
+        position: absolute;
+        right: 140px;
+        bottom: -200px;
+
+    }
+
+    #iddropdown {
+        width: 200px;
+    }
+
+    #iddropdown option {
+        width: 100px;
+    }
+
+    .tabcontent .element-name {
+        font-size: 15px;
+    }
+</style>
 <body>
 <div class="container-scroller">
     <!-- partial:../../partials/_navbar.html -->
@@ -42,7 +115,6 @@
                 <a class="navbar-brand brand-logo" href="../../index.html">
                     Maintenify
                 </a>
-
             </div>
         </div>
         <div class="navbar-menu-wrapper d-flex align-items-top">
@@ -172,30 +244,7 @@
 
     <!-- partial -->
     <div class="container-fluid page-body-wrapper">
-        <!-- partial:../../partials/_settings-panel.html -->
-        <div class="theme-setting-wrapper">
-            <div id="theme-settings" class="settings-panel">
-                <i class="settings-close ti-close"></i>
-                <p class="settings-heading">SIDEBAR SKINS</p>
-                <div class="sidebar-bg-options selected" id="sidebar-light-theme">
-                    <div class="img-ss rounded-circle bg-light border me-3"></div>
-                    Light
-                </div>
-                <div class="sidebar-bg-options" id="sidebar-dark-theme">
-                    <div class="img-ss rounded-circle bg-dark border me-3"></div>
-                    Dark
-                </div>
-                <p class="settings-heading mt-2">HEADER SKINS</p>
-                <div class="color-tiles mx-0 px-4">
-                    <div class="tiles success"></div>
-                    <div class="tiles warning"></div>
-                    <div class="tiles danger"></div>
-                    <div class="tiles info"></div>
-                    <div class="tiles dark"></div>
-                    <div class="tiles default"></div>
-                </div>
-            </div>
-        </div>
+
         <nav class="sidebar sidebar-offcanvas" id="sidebar">
             <ul class="nav">
                 <li class="nav-item">
@@ -260,44 +309,96 @@
         <!-- partial -->
         <div class="main-panel">
             <div class="content-wrapper">
-
                 <div class="row">
+                    <div class="d-sm-flex justify-content-start align-items-start">
+                        <div class="col-lg-12 grid-margin ">
+                            <h5>Requests</h5>
+                            <div>
+                                <div class="tab">
+                                    <button class="tablinks" onclick="openCity(event, 'FirstTask')"
+                                            id="defaultOpen">First Taskee
+                                    </button>
+                                    <button class="tablinks" onclick="openCity(event, 'SecondTask')">Second Task
+                                    </button>
+                                </div>
 
-                    <div class="col-lg-12 grid-margin ">
+                                <div id="FirstTask" class="tabcontent">
+                                    <div class="form-group">
+                                        <label class="element-name" for="elementname">Element name</label>
+                                        <input type="email" class="form-control form-control-lg" id="elementname"
+                                               placeholder="Element name">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="element-name" for="Quantity">Quantity</label>
+                                        <input type="number" class="form-control form-control-lg"
+                                               id="Quantity"
+                                               placeholder="Quantity">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="element-name" for="Quantityforns">Quantity forns</label>
+                                        <input type="email" class="form-control form-control-lg" id="Quantityforns"
+                                               placeholder="Quantity forns">
+                                    </div>
+                                    <h5>Status</h5>
+                                    <div class="my-2">
+                                        <form action="" class="floa">
+                                            <select class=" form-select" id="Status">
+                                                <option>First Demand</option>
+                                                <option>In Progress</option>
+                                                <option>Done</option>
+                                            </select>
+                                        </form>
+                                    </div>
 
-                        <div class="card">
+                                    <div>
+                                        <button class="btn btn-info text-black float-end mx-2 button_accept"
+                                                type="button">Accept
+                                        </button>
+                                        <button class="btn btn-danger text-black float-end button_id"
+                                                type="button">Cancel
+                                        </button>
+                                    </div>
+                                </div>
 
+                                <div id="SecondTask" class="tabcontent">
+                                    <div class="form-group">
+                                        <label class="element-name" for="elementname2">Element name</label>
+                                        <input type="email" class="form-control form-control-lg" id="elementname2"
+                                               placeholder="Element name">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="element-name" for="quantity2">Quantity</label>
+                                        <input type="number" class="form-control form-control-lg"
+                                               id="quantity2"
+                                               placeholder="Quantity">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="element-name" for="Quantityforns2">Quantity forns</label>
+                                        <input type="email" class="form-control form-control-lg" id="Quantityforns2"
+                                               placeholder="Quantity forns">
+                                    </div>
+                                    <h5>Status</h5>
+                                    <div class="my-2">
+                                        <form action="" class="floa">
+                                            <select class=" form-select" id="Status2">
+                                                <option>First Demand</option>
+                                                <option>In Progress</option>
+                                                <option>Done</option>
+                                            </select>
+                                        </form>
+                                    </div>
+                                    <div>
+                                        <button class="btn btn-info text-black float-end mx-2 button_accept"
+                                                type="button">Accept
+                                        </button>
+                                        <button class="btn btn-danger text-black float-end button_id"
+                                                type="button">Cancel
+                                        </button>
+                                    </div>
+                                </div>
+
+                            </div>
                         </div>
-                        <h2 class="text-center text-uppercase mt-5">Add new Item</h2>
-                        <form class="pt-3" action="">
-                            <div class="form-group">
-                                <label for="productname" class="label-text">Product Name</label>
-                                <input type="text" class="form-control form-control-lg" id="productname"
-                                       placeholder="Product name">
-                            </div>
-                            <div class="form-group">
-                                <label for="quantity">Product Quantity</label>
-                                <input type="text" class="form-control form-control-lg" id="quantity"
-                                       placeholder="Product quantity">
-                            </div>
-<!--                            <div class="form-group">-->
-                            <!--                                <label for="type">Product Type</label>-->
-                            <!--                                <input type="text" class="form-control form-control-lg" id="type"-->
-                            <!--                                       placeholder="Product type">-->
-                            <!--                            </div>-->
-                            <div class="form-group">
-                                <label for="problemdescription">Problem description</label>
-                                <textarea type="text" class="form-control form-control-lg"
-                                          id="problemdescription"
-                                          placeholder="Product name"
-                                rows="5"></textarea>
-                            </div>
-                            <div class="my-3 text-center">
-                                <a class="btn btn-block btn-primary btn-lg auth-form-btn"
-                                   href="employee.html">Add Item</a>
-                            </div>
-
-                        </form>
                     </div>
                 </div>
             </div>
@@ -318,6 +419,26 @@
 </div>
 <!-- container-scroller -->
 <!-- plugins:js -->
+
+<script>
+    function openCity(evt, cityName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(cityName).style.display = "block";
+        evt.currentTarget.className += " active";
+    }
+
+    // Get the element with id="defaultOpen" and click on it
+    document.getElementById("defaultOpen").click();
+</script>
+
 <script src="../../vendors/js/vendor.bundle.base.js"></script>
 <!-- endinject -->
 <!-- Plugin js for this page -->

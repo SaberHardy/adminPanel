@@ -11740,7 +11740,7 @@ fieldset:disabled .swal2-modal .swal2-buttonswrapper .swal2-styled,
 }
 
 .btn-info {
-  color: #ef0b0b;
+  color: #0b6eef;
   background-color: #52CDFF;
   border-color: #52CDFF;
 }
@@ -21473,9 +21473,9 @@ code {
 
 /*social buttons*/
 .btn-primary {
-  background: #3a88ff;
+  /*background: #3a88ff;*/
   color: #ffffff;
-  font-size: 25px;
+  /*font-size: 25px;*/
   font-weight: bold;
 }
 
@@ -21585,10 +21585,10 @@ code {
 }
 
 .btn-info {
-  background: #52CDFF;
+  /*background: #fd6d6d;*/
   color: #151414;
   font-weight: bold;
-  font-size: 18px;
+  /*font-size: 18px;*/
 }
 
 .btn-info.btn-light, .btn-info.btn-secondary {
@@ -28863,8 +28863,8 @@ div.tagsinput span.tag a {
 }
 
 .auth form .auth-form-btn {
-  padding: 1rem 3rem;
-  line-height: 1.5;
+  /*padding: 1rem 3rem;*/
+  /*line-height: 1.5;*/
 }
 
 .auth form .auth-link {
@@ -28910,11 +28910,29 @@ div.tagsinput span.tag a {
 }
 
 .content-wrapper {
-  background: #F4F5F7;
+  background: #dce6fa;
   padding: 1.5rem 2.187rem 1.5rem 3.5rem;
   width: 100%;
   -webkit-flex-grow: 1;
   flex-grow: 1;
+}
+
+/*.content-wrapper {*/
+/*  background: #fafafa;*/
+/*  !*padding: 1.5rem 2.187rem 1.5rem 3.5rem;*!*/
+/*  width: 100%;*/
+/*  -webkit-flex-grow: 1;*/
+/*  flex-grow: 1;*/
+/*}*/
+
+.content-wrapper .hello {
+  background-image: url("https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-4.0.3&ixid=\
+  MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1256&q=80");
+  padding: 1.5rem 2.187rem 1.5rem 3.5rem;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 @media (max-width: 767px) {

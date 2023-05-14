@@ -5,8 +5,10 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Stock Workers</title>
+    <title>Stock</title>
     <!-- plugins:css -->
+    <link rel="stylesheet" href="../../css/bootstrap-icons/bootstrap-icons.css">
+    <link rel="stylesheet" href="../../css/bootstrap-icons/bootstrap.min.css">
     <link rel="stylesheet" href="../../vendors/feather/feather.css">
     <link rel="stylesheet" href="../../vendors/mdi/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="../../vendors/ti-icons/css/themify-icons.css">
@@ -34,10 +36,7 @@
             </div>
             <div>
                 <a class="navbar-brand brand-logo" href="../../index.html">
-                    <img src="../../images/logo.svg" alt="logo"/>
-                </a>
-                <a class="navbar-brand brand-logo-mini" href="../../index.html">
-                    <img src="../../images/logo-mini.svg" alt="logo"/>
+                    Maintenify
                 </a>
             </div>
         </div>
@@ -168,10 +167,34 @@
 
     <!-- partial -->
     <div class="container-fluid page-body-wrapper">
+        <!-- partial:../../partials/_settings-panel.html -->
+        <div class="theme-setting-wrapper">
+            <div id="theme-settings" class="settings-panel">
+                <i class="settings-close ti-close"></i>
+                <p class="settings-heading">SIDEBAR SKINS</p>
+                <div class="sidebar-bg-options selected" id="sidebar-light-theme">
+                    <div class="img-ss rounded-circle bg-light border me-3"></div>
+                    Light
+                </div>
+                <div class="sidebar-bg-options" id="sidebar-dark-theme">
+                    <div class="img-ss rounded-circle bg-dark border me-3"></div>
+                    Dark
+                </div>
+                <p class="settings-heading mt-2">HEADER SKINS</p>
+                <div class="color-tiles mx-0 px-4">
+                    <div class="tiles success"></div>
+                    <div class="tiles warning"></div>
+                    <div class="tiles danger"></div>
+                    <div class="tiles info"></div>
+                    <div class="tiles dark"></div>
+                    <div class="tiles default"></div>
+                </div>
+            </div>
+        </div>
         <nav class="sidebar sidebar-offcanvas" id="sidebar">
             <ul class="nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="../../index.html">
+                    <a class="nav-link" href="index.html">
                         <i class="mdi mdi-grid-large menu-icon"></i>
                         <span class="menu-title">Dashboard</span>
                     </a>
@@ -187,20 +210,25 @@
                     <div class="collapse" id="ui-basic">
                         <ul class="nav flex-column sub-menu">
                             <li class="nav-item">
-                                <a class="nav-link" href="../../pages/ui-features/gerent.html">Gérant</a>
+                                <a class="nav-link"
+                                   href="../../pages/ui-features/departement_gerent.html">Department: Gerent</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link"
-                                   href="stock.html">Stock</a>
+                                   href="../../pages/ui-features/employee.html">Employee</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link"
-                                   href="../../pages/ui-features/stock_workers.html">Stock Worker</a>
+                                   href="../../pages/ui-features/maint_gerent.html">Maintenance Gerent</a>
 
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link"
-                                   href="../../pages/ui-features/maint_workers.html">Maintenance worker</a>
+                                   href="../../pages/ui-features/stock.html">Stock</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link"
+                                   href="../../pages/ui-features/fornisseur.html">Fornisseur</a>
                             </li>
                         </ul>
                     </div>
@@ -216,39 +244,85 @@
                     </a>
                     <div class="collapse" id="auth">
                         <ul class="nav flex-column sub-menu">
-                            <li class="nav-item"><a class="nav-link" href="pages/ui-features/login.html"> Login </a></li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="pages/ui-features/login.html"> Login </a>
+                            </li>
                         </ul>
                     </div>
                 </li>
-
             </ul>
         </nav>
         <!-- partial -->
         <div class="main-panel">
             <div class="content-wrapper">
+
                 <div class="row">
-                    <div class="col-lg-12 grid-margin">
+
+                    <div class="col-lg-12 grid-margin ">
+                        <div class="navbar-menu-wrapper">
+                            <ul class="navbar-nav ms-auto" style="display: inline;">
+                                <li class="nav-item">
+                                    <form class="search-form my-5" action="#">
+                                        <input type="search" class="form-control" placeholder="Search Here"
+                                               title="Search here">
+                                        <div style="overflow: hidden; padding-right: .5em;">
+                                            <button class="btn btn-success float-end my-3" style="width: 100%;">
+                                                Search Item
+                                            </button>
+                                            <a href="add_new_item.html" class="btn btn-info float-end my-3"
+                                               style="width: 100%;">
+                                                Add New Item
+                                            </a>
+                                        </div>
+                                    </form>
+                                </li>
+                            </ul>
+                        </div>
+
                         <div class="card">
                             <div class="card-body">
-                                <h4 class="card-title">Stock</h4>
+                                <h4 class="card-title">Tasks</h4>
                                 <table class="table">
                                     <thead>
                                     <tr>
-                                        <th>Object</th>
+                                        <th>Object Name</th>
+                                        <th>Object id</th>
                                         <th>Quantity</th>
-                                        <th>another property</th>
+<!--                                        <th>Type</th>-->
+                                        <th>Status</th>
+                                        <th>Delete/Update</th>
                                     </tr>
                                     </thead>
                                     <tbody>
                                     <tr>
-                                        <td>Table</td>
-                                        <td>150</td>
-                                        <td>exists</td>
+                                        <td><a href="../../order-detail.html">Tables</a></td>
+                                        <td>UB-12345</td>
+                                        <td>345</td>
+                                        <td>
+                                            <div class="badge badge-opacity-success">
+                                                Success
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <a href="" class="text-danger"> Delete</a>
+                                            <a href="" class="text-success mx-3"> Update</a>
+                                        </td>
+
                                     </tr>
                                     <tr>
-                                        <td>Messsy Morgan</td>
-                                        <td>300</td>
-                                        <td>Does not exists</td>
+                                        <td><a href="../../order-detail.html">Desktop</a></td>
+                                        <td>UB-124</td>
+                                        <td>124</td>
+                                        <td>
+                                            <div class="badge badge-opacity-warning">
+                                                In progress
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <a href="" class="text-danger"> Delete</a>
+                                            <a href="" class="text-success mx-3"> Update</a>
+                                        </td>
+
                                     </tr>
                                     </tbody>
                                 </table>
@@ -262,7 +336,7 @@
             <footer class="footer">
                 <div class="d-sm-flex justify-content-center justify-content-sm-between">
                     <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">
-                        Done by Admin B.
+                        Done By Admin.
                     </span>
                 </div>
             </footer>
