@@ -38,7 +38,7 @@
         border: 1px solid #ccc;
         background-color: #f1f1f1;
         width: 30%;
-        height: 300px;
+        height: 500px;
     }
 
     /* Style the buttons inside the tab */
@@ -76,18 +76,18 @@
         height: 300px;
     }
 
-    .btn-info {
-        position: absolute;
-        right: 15px;
-        bottom: -200px;
-    }
+    /*.btn-info {*/
+    /*    position: absolute;*/
+    /*    right: 15px;*/
+    /*    bottom: -80px;*/
+    /*}*/
 
-    .btn-danger {
-        position: absolute;
-        right: 140px;
-        bottom: -200px;
+    /*.btn-danger {*/
+    /*    position: absolute;*/
+    /*    right: 140px;*/
+    /*    bottom: -80px;*/
 
-    }
+    /*}*/
 
     #iddropdown {
         width: 200px;
@@ -124,93 +124,6 @@
                 </li>
             </ul>
             <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                    <form class="search-form" action="#">
-                        <i class="icon-search"></i>
-                        <input type="search" class="form-control" placeholder="Search Here" title="Search here">
-                    </form>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link count-indicator" id="notificationDropdown" href="#" data-bs-toggle="dropdown">
-                        <i class="icon-mail icon-lg"></i>
-                    </a>
-                    <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list pb-0"
-                         aria-labelledby="notificationDropdown">
-                        <a class="dropdown-item py-3 border-bottom">
-                            <p class="mb-0 font-weight-medium float-left">You have 4 new notifications </p>
-                            <span class="badge badge-pill badge-primary float-right">View all</span>
-                        </a>
-                        <a class="dropdown-item preview-item py-3">
-                            <div class="preview-thumbnail">
-                                <i class="mdi mdi-alert m-auto text-primary"></i>
-                            </div>
-                            <div class="preview-item-content">
-                                <h6 class="preview-subject fw-normal text-dark mb-1">Application Error</h6>
-                                <p class="fw-light small-text mb-0"> Just now </p>
-                            </div>
-                        </a>
-                        <a class="dropdown-item preview-item py-3">
-                            <div class="preview-thumbnail">
-                                <i class="mdi mdi-settings m-auto text-primary"></i>
-                            </div>
-                            <div class="preview-item-content">
-                                <h6 class="preview-subject fw-normal text-dark mb-1">Settings</h6>
-                                <p class="fw-light small-text mb-0"> Private message </p>
-                            </div>
-                        </a>
-                        <a class="dropdown-item preview-item py-3">
-                            <div class="preview-thumbnail">
-                                <i class="mdi mdi-airballoon m-auto text-primary"></i>
-                            </div>
-                            <div class="preview-item-content">
-                                <h6 class="preview-subject fw-normal text-dark mb-1">New user registration</h6>
-                                <p class="fw-light small-text mb-0"> 2 days ago </p>
-                            </div>
-                        </a>
-                    </div>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link count-indicator" id="countDropdown" href="#" data-bs-toggle="dropdown"
-                       aria-expanded="false">
-                        <i class="icon-bell"></i>
-                        <span class="count"></span>
-                    </a>
-                    <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list pb-0"
-                         aria-labelledby="countDropdown">
-                        <a class="dropdown-item py-3">
-                            <p class="mb-0 font-weight-medium float-left">You have 7 unread mails </p>
-                            <span class="badge badge-pill badge-primary float-right">View all</span>
-                        </a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item preview-item">
-                            <div class="preview-thumbnail">
-                                <img src="images/faces/face10.jpg" alt="image" class="img-sm profile-pic">
-                            </div>
-                            <div class="preview-item-content flex-grow py-2">
-                                <p class="preview-subject ellipsis font-weight-medium text-dark">Marian Garner </p>
-                                <p class="fw-light small-text mb-0"> The meeting is cancelled </p>
-                            </div>
-                        </a>
-                        <a class="dropdown-item preview-item">
-                            <div class="preview-thumbnail">
-                                <img src="images/faces/face12.jpg" alt="image" class="img-sm profile-pic">
-                            </div>
-                            <div class="preview-item-content flex-grow py-2">
-                                <p class="preview-subject ellipsis font-weight-medium text-dark">David Grey </p>
-                                <p class="fw-light small-text mb-0"> The meeting is cancelled </p>
-                            </div>
-                        </a>
-                        <a class="dropdown-item preview-item">
-                            <div class="preview-thumbnail">
-                                <img src="images/faces/face1.jpg" alt="image" class="img-sm profile-pic">
-                            </div>
-                            <div class="preview-item-content flex-grow py-2">
-                                <p class="preview-subject ellipsis font-weight-medium text-dark">Travis Jenkins </p>
-                                <p class="fw-light small-text mb-0"> The meeting is cancelled </p>
-                            </div>
-                        </a>
-                    </div>
-                </li>
                 <li class="nav-item dropdown d-none d-lg-block user-dropdown">
                     <a class="nav-link" id="UserDropdown" href="#" data-bs-toggle="dropdown" aria-expanded="false">
                         <img class="img-xs rounded-circle" src="../../images/faces/face8.jpg" alt="Profile image"> </a>
@@ -308,95 +221,96 @@
         </nav>
         <!-- partial -->
         <div class="main-panel">
-            <div class="content-wrapper">
-                <div class="row">
-                    <div class="d-sm-flex justify-content-start align-items-start">
-                        <div class="col-lg-12 grid-margin ">
-                            <h5>Requests</h5>
-                            <div>
-                                <div class="tab">
-                                    <button class="tablinks" onclick="openCity(event, 'FirstTask')"
-                                            id="defaultOpen">First Taskee
-                                    </button>
-                                    <button class="tablinks" onclick="openCity(event, 'SecondTask')">Second Task
-                                    </button>
-                                </div>
+            <div class="content-wrapper topadding">
+                <div class="row" style="margin-bottom: 100px">
+                    <div class="auth-form-light text-left px-4 px-sm-5">
+                        <div class="d-sm-flex justify-content-start align-items-start">
+                            <div class="col-lg-12 grid-margin">
+                                <h5>Requests</h5>
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="tab rounded-3 mb-5">
+                                            <button class="tablinks" onclick="openCity(event, 'FirstTask')"
+                                                    id="defaultOpen">First Taskee
+                                            </button>
+                                            <button class="tablinks" onclick="openCity(event, 'SecondTask')">Second
+                                                Task
+                                            </button>
+                                        </div>
 
-                                <div id="FirstTask" class="tabcontent">
-                                    <div class="form-group">
-                                        <label class="element-name" for="elementname">Element name</label>
-                                        <input type="email" class="form-control form-control-lg" id="elementname"
-                                               placeholder="Element name">
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="element-name" for="Quantity">Quantity</label>
-                                        <input type="number" class="form-control form-control-lg"
-                                               id="Quantity"
-                                               placeholder="Quantity">
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="element-name" for="Quantityforns">Quantity forns</label>
-                                        <input type="email" class="form-control form-control-lg" id="Quantityforns"
-                                               placeholder="Quantity forns">
-                                    </div>
-                                    <h5>Status</h5>
-                                    <div class="my-2">
-                                        <form action="" class="floa">
-                                            <select class=" form-select" id="Status">
-                                                <option>First Demand</option>
-                                                <option>In Progress</option>
-                                                <option>Done</option>
-                                            </select>
-                                        </form>
-                                    </div>
+                                        <div id="FirstTask" class="tabcontent">
+                                            <div class="">
+                                                <h4 class="float-left" style="padding-left: 0">Status</h4>
+                                                <form action="" class="floa">
+                                                    <select class="form-select" id="Status1">
+                                                        <option>Select an Option</option>
+                                                        <option>Done</option>
+                                                        <option>Not Done</option>
+                                                    </select>
+                                                </form>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="element-name mt-3" for="elementname">Element name</label>
+                                                <input type="email" class="form-control form-control-lg"
+                                                       id="elementname"
+                                                       placeholder="Element name">
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="element-name" for="Quantity">Quantity</label>
+                                                <input type="number" class="form-control form-control-lg"
+                                                       id="Quantity"
+                                                       placeholder="Quantity">
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="element-name" for="Quantityforns">Quantity
+                                                    forns</label>
+                                                <input type="email" class="form-control form-control-lg"
+                                                       id="Quantityforns"
+                                                       placeholder="Quantity forns">
+                                            </div>
+                                        </div>
 
+                                        <div class="tabcontent" id="SecondTask">
+                                            <div class="">
+                                                <h4 class="float-left" style="padding-left: 0">Status</h4>
+                                                <form action="" class="floa">
+                                                    <select class=" form-select" id="Status2">
+                                                        <option>Select an Option</option>
+                                                        <option>Done</option>
+                                                        <option>Not Done</option>
+                                                    </select>
+                                                </form>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="element-name mt-3" for="elementname2">Element name</label>
+                                                <input type="email" class="form-control form-control-lg"
+                                                       id="elementname2"
+                                                       placeholder="Element name">
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="element-name" for="quantity2">Quantity</label>
+                                                <input type="number" class="form-control form-control-lg"
+                                                       id="quantity2"
+                                                       placeholder="Quantity">
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="element-name" for="Quantityforns2">Quantity
+                                                    forns</label>
+                                                <input type="email" class="form-control form-control-lg"
+                                                       id="Quantityforns2"
+                                                       placeholder="Quantity forns">
+                                            </div>
+                                        </div>
+                                    </div>
                                     <div>
-                                        <button class="btn btn-info text-black float-end mx-2 button_accept"
+                                        <button class="btn btn-info text-black float-end mx-2 my-3 button_accept"
                                                 type="button">Accept
                                         </button>
-                                        <button class="btn btn-danger text-black float-end button_id"
+                                        <button class="btn btn-danger text-black my-3 float-end button_id"
                                                 type="button">Cancel
                                         </button>
                                     </div>
                                 </div>
-
-                                <div id="SecondTask" class="tabcontent">
-                                    <div class="form-group">
-                                        <label class="element-name" for="elementname2">Element name</label>
-                                        <input type="email" class="form-control form-control-lg" id="elementname2"
-                                               placeholder="Element name">
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="element-name" for="quantity2">Quantity</label>
-                                        <input type="number" class="form-control form-control-lg"
-                                               id="quantity2"
-                                               placeholder="Quantity">
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="element-name" for="Quantityforns2">Quantity forns</label>
-                                        <input type="email" class="form-control form-control-lg" id="Quantityforns2"
-                                               placeholder="Quantity forns">
-                                    </div>
-                                    <h5>Status</h5>
-                                    <div class="my-2">
-                                        <form action="" class="floa">
-                                            <select class=" form-select" id="Status2">
-                                                <option>First Demand</option>
-                                                <option>In Progress</option>
-                                                <option>Done</option>
-                                            </select>
-                                        </form>
-                                    </div>
-                                    <div>
-                                        <button class="btn btn-info text-black float-end mx-2 button_accept"
-                                                type="button">Accept
-                                        </button>
-                                        <button class="btn btn-danger text-black float-end button_id"
-                                                type="button">Cancel
-                                        </button>
-                                    </div>
-                                </div>
-
                             </div>
                         </div>
                     </div>

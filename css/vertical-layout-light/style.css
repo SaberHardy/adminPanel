@@ -10698,7 +10698,7 @@ progress {
 .form-control::placeholder, .asColorPicker-input::placeholder, .dataTables_wrapper select::placeholder, .select2-container--default .select2-selection--single::placeholder, .select2-container--default .select2-selection--single .select2-search__field::placeholder, .typeahead::placeholder,
 .tt-query::placeholder,
 .tt-hint::placeholder {
-  color: #c9c8c8;
+  color: #090606;
   opacity: 1;
 }
 
@@ -25904,7 +25904,7 @@ dl li {
 }
 
 .home-tab .tab-content {
-  padding: 24px 0;
+  padding: 24px 20px 0;
   font-family: "Manrope", sans-serif;
   border: none;
 }
@@ -28783,7 +28783,8 @@ div.tagsinput span.tag a {
 }
 
 .auth .auth-form-light {
-  background: #ffffff;
+  background: #d9e6f796;
+  border-radius: 30px;
 }
 
 .auth .auth-form-light select {
@@ -28867,6 +28868,11 @@ div.tagsinput span.tag a {
   /*line-height: 1.5;*/
 }
 
+.auth form .form-group .form-control {
+  border-radius: 20px;
+  border-color: #000000;
+}
+
 .auth form .auth-link {
   font-size: 0.812rem;
 }
@@ -28883,7 +28889,7 @@ div.tagsinput span.tag a {
   flex-direction: row;
   padding-left: 0;
   padding-right: 0;
-  padding-top: 97px;
+  padding-top: 70px;
 }
 
 .page-body-wrapper.full-page-wrapper {
@@ -28911,7 +28917,7 @@ div.tagsinput span.tag a {
 
 .content-wrapper {
   background: #dce6fa;
-  padding: 1.5rem 2.187rem 1.5rem 3.5rem;
+  /*padding: 1.5rem 2.187rem 1.5rem 3.5rem;*/
   width: 100%;
   -webkit-flex-grow: 1;
   flex-grow: 1;
@@ -29134,7 +29140,11 @@ div.tagsinput span.tag a {
 }
 
 .sidebar .nav:not(.sub-menu) > .nav-item > .nav-link {
-  margin: 0;
+  margin-top: 20px;
+}
+
+.topadding {
+      padding: 3rem 2.187rem 1.5rem 3.5rem;
 }
 
 .sidebar .nav:not(.sub-menu) > .nav-item > .nav-link[aria-expanded="true"] {
