@@ -5,6 +5,8 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" rel="stylesheet">
+
     <title>Stock</title>
     <!-- plugins:css -->
     <link rel="stylesheet" href="../../css/bootstrap-icons/bootstrap-icons.css">
@@ -23,7 +25,96 @@
     <!-- endinject -->
     <link rel="shortcut icon" href="../../images/favicon.png"/>
 </head>
+<style>
+    .red-rounded-span {
+        background-color: #fd6d6d;
+        border-radius: 10%;
+        height: 26px;
+        width: 60px;
+        line-height: 26px;
+        display: inline-block;
+        text-align: center;
+    }
 
+    .green-rounded-span {
+        background-color: #91fd6d;
+        border-radius: 10%;
+        height: 26px;
+        width: 60px;
+        line-height: 26px;
+        display: inline-block;
+        text-align: center;
+    }
+
+    /* Style the tab */
+    .tab {
+        float: left;
+        border: 1px solid #ccc;
+        background-color: #f1f1f1;
+        width: 30%;
+        height: 500px;
+    }
+
+    /* Style the buttons inside the tab */
+    .tab button {
+        display: block;
+        background-color: inherit;
+        color: black;
+        padding: 22px 16px;
+        width: 100%;
+        border: none;
+        outline: none;
+        text-align: left;
+        cursor: pointer;
+        transition: 0.3s;
+        font-size: 17px;
+    }
+
+    /* Change background color of buttons on hover */
+    .tab button:hover {
+        background-color: #ddd;
+    }
+
+    /* Create an active/current "tab button" class */
+    .tab button.active {
+        background-color: #ccc;
+    }
+
+    /* Style the tab content */
+    .tabcontent {
+        float: left;
+        padding: 0px 12px;
+        border: 0px solid #d70f0f;
+        width: 70%;
+        border-left: none;
+        height: 300px;
+    }
+
+    /*.btn-info {*/
+    /*    position: absolute;*/
+    /*    right: 15px;*/
+    /*    bottom: -80px;*/
+    /*}*/
+
+    /*.btn-danger {*/
+    /*    position: absolute;*/
+    /*    right: 140px;*/
+    /*    bottom: -80px;*/
+
+    /*}*/
+
+    #iddropdown {
+        width: 200px;
+    }
+
+    #iddropdown option {
+        width: 100px;
+    }
+
+    .tabcontent .element-name {
+        font-size: 15px;
+    }
+</style>
 <body>
 <div class="container-scroller">
     <!-- partial:../../partials/_navbar.html -->
@@ -43,7 +134,23 @@
         <div class="navbar-menu-wrapper d-flex align-items-top">
             <ul class="navbar-nav">
                 <li class="nav-item font-weight-semibold d-none d-lg-block ms-0">
-                    <h1 class="welcome-text">Good Morning, <span class="text-black fw-bold">Admin</span></h1>
+                    <a href="../../pages/ui-features/tasks.html" class="text-black fw-bold">
+                        Tasks
+                    </a>
+                </li>
+                <li class="nav-item font-weight-semibold d-none d-lg-block ms-0">
+                    <a href="../../pages/ui-features/order_product.html"
+                       class="text-black fw-bold mx-2">
+                        Order item
+                    </a>
+                </li>
+                <!--                <li class="nav-item font-weight-semibold d-none d-lg-block ms-0 ">-->
+                <!--                    <a href="departement_gerent.html"-->
+                <!--                       class="text-black fw-bold mr-2">Department</a>-->
+                <!--                </li>-->
+                <li class="nav-item font-weight-semibold d-none d-lg-block ms-0 ">
+                    <a href="../../pages/ui-features/add_new_item.html"
+                       class="text-black fw-bold mr-2">Add new item</a>
                 </li>
             </ul>
             <ul class="navbar-nav ms-auto">
@@ -80,30 +187,7 @@
 
     <!-- partial -->
     <div class="container-fluid page-body-wrapper">
-        <!-- partial:../../partials/_settings-panel.html -->
-        <div class="theme-setting-wrapper">
-            <div id="theme-settings" class="settings-panel">
-                <i class="settings-close ti-close"></i>
-                <p class="settings-heading">SIDEBAR SKINS</p>
-                <div class="sidebar-bg-options selected" id="sidebar-light-theme">
-                    <div class="img-ss rounded-circle bg-light border me-3"></div>
-                    Light
-                </div>
-                <div class="sidebar-bg-options" id="sidebar-dark-theme">
-                    <div class="img-ss rounded-circle bg-dark border me-3"></div>
-                    Dark
-                </div>
-                <p class="settings-heading mt-2">HEADER SKINS</p>
-                <div class="color-tiles mx-0 px-4">
-                    <div class="tiles success"></div>
-                    <div class="tiles warning"></div>
-                    <div class="tiles danger"></div>
-                    <div class="tiles info"></div>
-                    <div class="tiles dark"></div>
-                    <div class="tiles default"></div>
-                </div>
-            </div>
-        </div>
+
         <nav class="sidebar sidebar-offcanvas" id="sidebar">
             <ul class="nav">
 
@@ -163,77 +247,94 @@
         <!-- partial -->
         <div class="main-panel">
             <div class="content-wrapper topadding">
-
-                <div class="row">
-
-                    <div class="col-lg-12 grid-margin ">
-                        <div class="navbar-menu-wrapper">
-                            <ul class="navbar-nav ms-auto" style="display: inline;">
-                                <li class="nav-item">
-                                    <form class="search-form my-5" action="#">
-                                        <input type="search" class="form-control" placeholder="Search Here"
-                                               title="Search here">
-                                        <div style="overflow: hidden; padding-right: .5em;">
-                                            <button class="btn btn-success float-end my-3" style="width: 100%;">
-                                                Search Item
+                <div class="row" style="margin-bottom: 100px">
+                    <div class="auth-form-light text-left px-4 px-sm-5">
+                        <div class="d-sm-flex justify-content-start align-items-start">
+                            <div class="col-lg-12 grid-margin">
+                                <h3 class="text-center my-3">Tasks should be done</h3>
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="tab rounded-3 mb-5">
+                                            <button class="tablinks" onclick="openCity(event, 'FirstTask')"
+                                                    id="defaultOpen">
+                                                First Task
+                                                <span class="green-rounded-span float-right">Done</span>
                                             </button>
-                                            <a href="add_new_item.html" class="btn btn-info float-end my-3"
-                                               style="width: 100%;">
-                                                Add New Item
-                                            </a>
+                                            <button class="tablinks" onclick="openCity(event, 'SecondTask')">
+                                                Second Task
+                                                <!--                                                <span class="text-success float-right">Not Yet</span>-->
+                                                <span class="red-rounded-span float-right">Not Yet</span>
+
+                                            </button>
                                         </div>
-                                    </form>
-                                </li>
-                            </ul>
-                        </div>
 
-                        <div class="card">
-                            <div class="card-body">
-                                <h4 class="card-title">Tasks</h4>
-                                <table class="table">
-                                    <thead>
-                                    <tr>
-                                        <th>Object Name</th>
-                                        <th>Object id</th>
-                                        <th>Quantity</th>
-<!--                                        <th>Type</th>-->
-                                        <th>Status</th>
-                                        <th>Delete/Update</th>
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-                                    <tr>
-                                        <td><a href="../../order-detail.html">Tables</a></td>
-                                        <td>UB-12345</td>
-                                        <td>345</td>
-                                        <td>
-                                            <div class="badge badge-opacity-success">
-                                                Success
+                                        <div id="FirstTask" class="tabcontent">
+                                            <div class="">
+                                                <label class="float-left" style="padding-left: 0">Status</label>
+                                                <form action="" class="floa">
+                                                    <select class="form-select" id="Status1">
+                                                        <option>Done</option>
+                                                        <option>Not Done</option>
+                                                    </select>
+                                                </form>
                                             </div>
-                                        </td>
-                                        <td>
-                                            <a href="" class="text-danger"> Delete</a>
-                                            <a href="" class="text-success mx-3"> Update</a>
-                                        </td>
+                                            <div class="form-group">
+                                                <label class="element-name mt-3" for="description">Description</label>
+                                                <textarea type="text" class="form-control form-control-lg border-3"
+                                                          id="description"
+                                                          placeholder="Element name" rows="10">
 
-                                    </tr>
-                                    <tr>
-                                        <td><a href="../../order-detail.html">Desktop</a></td>
-                                        <td>UB-124</td>
-                                        <td>124</td>
-                                        <td>
-                                            <div class="badge badge-opacity-warning">
-                                                In progress
+                                                </textarea>
                                             </div>
-                                        </td>
-                                        <td>
-                                            <a href="" class="text-danger"> Delete</a>
-                                            <a href="" class="text-success mx-3"> Update</a>
-                                        </td>
+                                            <div class="">
+                                                <label class="float-left" style="padding-left: 0">Affecctation </label>
+                                                <form action="" class="floa">
+                                                    <select class="form-select" id="affectation1">
+                                                        <option>Name: Printer</option>
+                                                        <option>Id: 43</option>
+                                                    </select>
+                                                </form>
+                                            </div>
+                                        </div>
 
-                                    </tr>
-                                    </tbody>
-                                </table>
+                                        <div id="SecondTask" class="tabcontent">
+                                            <div class="">
+                                                <label class="float-left" style="padding-left: 0">Status</label>
+                                                <form action="" class="floa">
+                                                    <select class="form-select" id="Status2">
+                                                        <option>Done</option>
+                                                        <option>Not Done</option>
+                                                    </select>
+                                                </form>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="element-name mt-3" for="elementname2">Description</label>
+                                                <textarea type="text" class="form-control form-control-lg border-3"
+                                                          id="elementname2"
+                                                          placeholder="Element name" rows="10">
+
+                                                </textarea>
+                                            </div>
+                                            <div class="">
+                                                <label class="float-left" style="padding-left: 0">Affecctation </label>
+                                                <form action="" class="floa">
+                                                    <select class="form-select" id="affectation">
+                                                        <option>Name: Printer</option>
+                                                        <option>Id: 43</option>
+                                                    </select>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <button class="btn btn-info text-black float-end mx-2 my-3 button_accept"
+                                                type="button">Done
+                                        </button>
+                                        <button class="btn btn-danger text-black my-3 float-end button_id"
+                                                type="button">Cancel
+                                        </button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -256,6 +357,26 @@
 </div>
 <!-- container-scroller -->
 <!-- plugins:js -->
+
+<script>
+    function openCity(evt, cityName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(cityName).style.display = "block";
+        evt.currentTarget.className += " active";
+    }
+
+    // Get the element with id="defaultOpen" and click on it
+    document.getElementById("defaultOpen").click();
+</script>
+
 <script src="../../vendors/js/vendor.bundle.base.js"></script>
 <!-- endinject -->
 <!-- Plugin js for this page -->
