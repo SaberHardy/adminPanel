@@ -121,16 +121,21 @@
         </div>
         <div class="navbar-menu-wrapper d-flex align-items-top text-center">
             <ul class="navbar-nav">
-                <li class="nav-item font-weight-semibold d-none d-lg-block ms-0 ">
-                    <a href="departement_gerent.html"
-                       class="text-black fw-bold mr-2">Department</a>
-                </li>
-                <li class="nav-item font-weight-semibold d-none d-lg-block ms-0">
-                    <a href="../../pages/ui-features/stock.html" class="text-black fw-bold mx-2">Check all orders</a>
-                </li>
                 <li class="nav-item font-weight-semibold d-none d-lg-block ms-0">
                     <a href="../../pages/ui-features/prblm_annocment.html" class="text-black fw-bold">Problem
                         Announcement</a>
+                </li>
+                <li class="nav-item font-weight-semibold d-none d-lg-block ms-0">
+                    <a href="../../pages/ui-features/order_product.html" class="text-black fw-bold mx-2">Order a
+                        product</a>
+                </li>
+<!--                <li class="nav-item font-weight-semibold d-none d-lg-block ms-0 ">-->
+<!--                    <a href="departement_gerent.html"-->
+<!--                       class="text-black fw-bold mr-2">Department</a>-->
+<!--                </li>-->
+                <li class="nav-item font-weight-semibold d-none d-lg-block ms-0 ">
+                    <a href="../../pages/ui-features/tasks.html"
+                       class="text-black fw-bold mr-2">Tasks</a>
                 </li>
             </ul>
             <ul class="navbar-nav ms-auto">
@@ -232,83 +237,25 @@
                     <div class="auth-form-light text-left px-4 px-sm-5">
                         <div class="d-sm-flex justify-content-start align-items-start">
                             <div class="col-lg-12 grid-margin">
-                                <h5>Requests</h5>
+
                                 <div class="card">
                                     <div class="card-body">
-                                        <div class="tab rounded-3 mb-5">
-                                            <button class="tablinks" onclick="openCity(event, 'FirstTask')"
-                                                    id="defaultOpen">First Taske
-                                            </button>
-                                            <button class="tablinks" onclick="openCity(event, 'SecondTask')">Second
-                                                Task
-                                            </button>
-                                        </div>
+                                        <h5 class="text-center my-3 mb-3">Department</h5>
+                                        <label for="productname" class="label-text">Product Name</label>
+                                        <input type="text" class="form-control form-control-lg" id="productname"
+                                               placeholder="Product name">
 
-                                        <div id="FirstTask" class="tabcontent">
-                                            <div class="">
-                                                <h4 class="float-left" style="padding-left: 0">Status</h4>
-                                                <form action="" class="floa">
-                                                    <select class="form-select" id="Status1">
-                                                        <option>Select an Option</option>
-                                                        <option>Done</option>
-                                                        <option>Not Done</option>
-                                                    </select>
-                                                </form>
-                                            </div>
-                                            <div class="form-group">
-                                                <label class="element-name mt-3" for="elementname">Element name</label>
-                                                <input type="email" class="form-control form-control-lg"
-                                                       id="elementname"
-                                                       placeholder="Element name">
-                                            </div>
-                                            <div class="form-group">
-                                                <label class="element-name" for="Quantity">Quantity</label>
-                                                <input type="number" class="form-control form-control-lg"
-                                                       id="Quantity"
-                                                       placeholder="Quantity">
-                                            </div>
-                                            <div class="form-group">
-                                                <label class="element-name" for="Quantityforns">Quantity
-                                                    forns</label>
-                                                <input type="email" class="form-control form-control-lg"
-                                                       id="Quantityforns"
-                                                       placeholder="Quantity forns">
-                                            </div>
-                                        </div>
+                                        <label for="productqnt" class="label-text my-3">Product Quantity</label>
+                                        <input type="number" class="form-control form-control-lg" id="productqnt"
+                                               placeholder="Product Quantity">
 
-                                        <div class="tabcontent" id="SecondTask">
-                                            <div class="">
-                                                <h4 class="float-left" style="padding-left: 0">Status</h4>
-                                                <form action="" class="floa">
-                                                    <select class=" form-select" id="Status2">
-                                                        <option>Select an Option</option>
-                                                        <option>Done</option>
-                                                        <option>Not Done</option>
-                                                    </select>
-                                                </form>
-                                            </div>
-                                            <div class="form-group">
-                                                <label class="element-name mt-3" for="elementname2">Element name</label>
-                                                <input type="email" class="form-control form-control-lg"
-                                                       id="elementname2"
-                                                       placeholder="Element name">
-                                            </div>
-                                            <div class="form-group">
-                                                <label class="element-name" for="quantity2">Quantity</label>
-                                                <input type="number" class="form-control form-control-lg"
-                                                       id="quantity2"
-                                                       placeholder="Quantity">
-                                            </div>
-                                            <div class="form-group">
-                                                <label class="element-name" for="Quantityforns2">Quantity
-                                                    forns</label>
-                                                <input type="email" class="form-control form-control-lg"
-                                                       id="Quantityforns2"
-                                                       placeholder="Quantity forns">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div>
+                                        <label class="my-3" for="start">Pick a Date</label>
+                                        <br/>
+                                        <input class="form-control form-control-lg " type="date" id="start"
+                                               name="trip-start"
+                                               value="2018-07-22"
+                                               min="2018-01-01" max="2018-12-31">
+
                                         <button class="btn btn-info text-black float-end mx-2 my-3 button_accept"
                                                 type="button">Accept
                                         </button>
